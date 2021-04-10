@@ -4,6 +4,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
+  title: 'main-umi',
   routes: [
     { path: '/', component: '@/pages/index' },
     { path: '/a', component: '@/pages/A' },
