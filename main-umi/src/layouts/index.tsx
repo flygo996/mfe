@@ -39,6 +39,76 @@ export default (props: any) => {
         </NavLink>
       </h2>
       <div className="content">{props.children}</div>
+      <br />
+      <h2>
+        <NavLink
+          to="/vue"
+          exact
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'red',
+          }}
+        >
+          Vue Home
+        </NavLink>
+        {' | '}
+        <NavLink
+          to="/vue/about"
+          exact
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'red',
+          }}
+        >
+          Vue About
+        </NavLink>
+        {' | '}
+        <NavLink
+          to="/vue/login"
+          exact
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'red',
+          }}
+        >
+          Vue Login
+        </NavLink>
+      </h2>
+      <h2>
+        <NavLink
+          to="/vue2"
+          exact
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'red',
+          }}
+        >
+          Vue2 Home
+        </NavLink>
+        {' | '}
+        <NavLink
+          to="/vue2/about"
+          exact
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'red',
+          }}
+        >
+          Vue2 About
+        </NavLink>
+        {' | '}
+        <NavLink
+          to="/vue2/login"
+          exact
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'red',
+          }}
+        >
+          Vue2 Login
+        </NavLink>
+      </h2>
+      <div id="mfeContainer">子应用容器</div>
     </section>
   )
 }
