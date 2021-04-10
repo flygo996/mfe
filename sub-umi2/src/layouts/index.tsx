@@ -3,7 +3,7 @@ import { NavLink } from 'umi'
 export default (props: any) => {
   return (
     <section style={{ textAlign: 'center' }}>
-      <h2>main-umi 项目</h2>
+      <h2>sub-umi2 项目</h2>
       <h2>
         <NavLink
           to="/"
