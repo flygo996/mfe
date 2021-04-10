@@ -24,3 +24,7 @@
 | sub-vue2  | 1540 |                |
 
 2 个主项目为 history 模式下，子项目能否同时支持 history 和 hash，或者分别为 history 和 hash 时会不会出现什么异常。
+
+## 运行脚本使用 npm-run-all
+
+参考： `npm-run-all 简化script配置` https://juejin.cn/post/6854573216363446286

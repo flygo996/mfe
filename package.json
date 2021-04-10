@@ -1,0 +1,22 @@
+{
+  "name": "lfp-mfe-templates2",
+  "version": "1.0.0",
+  "description": "本项目是微前端项目，在之前的微前端项目中进行改进。\r 本项目的后端共用一个，父项目自有一个，使用 Umi。",
+  "main": "index.js",
+  "scripts": {
+    "server": "cd server && node index.js",
+    "main-umi": "cd main-umi && npm run start",
+    "main-umi2": "cd main-umi2 && npm run start",
+    "sub-umi": "cd sub-umi && npm run start",
+    "sub-umi2": "cd sub-umi2 && npm run start",
+    "sub-vue": "cd sub-vue && npm run start",
+    "sub-vue2": "cd sub-vue2 && npm run start",
+    "start":"npm-run-all --parallel main-umi main-umi2 sub-umi sub-umi2 sub-vue sub-vue2",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
