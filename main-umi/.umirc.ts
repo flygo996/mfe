@@ -33,6 +33,7 @@ export default defineConfig({
       ],
     },
   ],
+
   devServer: {
     port: 1500,
   },

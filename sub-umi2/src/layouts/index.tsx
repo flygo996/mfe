@@ -1,9 +1,11 @@
+import { useEffect } from 'react'
 import { NavLink } from 'umi'
 
 export default (props: any) => {
+  const { children } = props
   return (
     <section style={{ textAlign: 'center' }}>
-      <h2>sub-umi2 项目</h2>
+      <h2>sub-umi 项目</h2>
       <h2>
         <NavLink
           to="/"
@@ -38,7 +40,7 @@ export default (props: any) => {
           BBB
         </NavLink>
       </h2>
-      <div className="content">{props.children}</div>
+      <div className="content">{children}</div>
     </section>
   )
 }

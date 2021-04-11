@@ -6,10 +6,19 @@ export default defineConfig({
   },
   title: 'sub-umi',
   routes: [
-    { path: '/', component: '@/pages/index' },
-    { path: '/a', component: '@/pages/A' },
-    { path: '/b', component: '@/pages/B' },
+    {
+      path: '/',
+      component: '@/layouts/index',
+      routes: [
+        { path: '/', component: '@/pages/Index' },
+        { path: '/a', component: '@/pages/A' },
+        { path: '/b', component: '@/pages/B' },
+      ],
+    },
   ],
+  qiankun: {
+    slave: {},
+  },
   devServer: {
     port: 1510,
   },
