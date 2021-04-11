@@ -5,7 +5,7 @@ export default (props: any) => {
   const { children } = props
   return (
     <section style={{ textAlign: 'center' }}>
-      <h2>sub-umi 项目</h2>
+      <h2>sub-umi2 项目</h2>
       <h2>
         <NavLink
           to="/"
