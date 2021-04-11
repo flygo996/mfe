@@ -1,4 +1,5 @@
-import { NavLink } from 'umi';
+import { NavLink, MicroApp } from 'umi';
+import styles from './index.less';
 
 export default (props: any) => {
   const { children } = props;
@@ -189,7 +190,13 @@ export default (props: any) => {
           Umi2 BBB
         </NavLink>
       </h3>
-      <div className="content">{children}</div>
+      <div className={styles.content}>{children}</div>
+      <br />
+      <br />
+      <h3>MicroApp 形式引入(base可以按自己需求任意填写)</h3>
+      <div className={styles.content}>
+        <MicroApp name="sub-umi2" base="/umi2umi2#/" />
+      </div>
     </section>
   );
 };
