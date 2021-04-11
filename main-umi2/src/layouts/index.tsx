@@ -55,7 +55,7 @@ export default (props: any) => {
       </p>
       <h3>
         <NavLink
-          to="/vue1"
+          to="/vue1/#"
           exact
           activeStyle={{
             fontWeight: 'bold',
@@ -66,7 +66,7 @@ export default (props: any) => {
         </NavLink>
         {' | '}
         <NavLink
-          to="/vue1/about"
+          to="/vue1/#/about"
           exact
           activeStyle={{
             fontWeight: 'bold',
@@ -77,7 +77,7 @@ export default (props: any) => {
         </NavLink>
         {' | '}
         <NavLink
-          to="/vue1/login"
+          to="/vue1/#/login"
           exact
           activeStyle={{
             fontWeight: 'bold',
@@ -89,7 +89,7 @@ export default (props: any) => {
       </h3>
       <h3>
         <NavLink
-          to="/vue2"
+          to="/vue2/#"
           exact
           activeStyle={{
             fontWeight: 'bold',
@@ -100,7 +100,7 @@ export default (props: any) => {
         </NavLink>
         {' | '}
         <NavLink
-          to="/vue2/about"
+          to="/vue2/#/about"
           exact
           activeStyle={{
             fontWeight: 'bold',
@@ -111,7 +111,7 @@ export default (props: any) => {
         </NavLink>
         {' | '}
         <NavLink
-          to="/vue2/login"
+          to="/vue2/#/login"
           exact
           activeStyle={{
             fontWeight: 'bold',
