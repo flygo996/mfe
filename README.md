@@ -22,3 +22,6 @@ npm run server
 
 2、启动各个项目
 npm run start
+
+3、docker + nginx 部署各个项目
+npm run deploy
