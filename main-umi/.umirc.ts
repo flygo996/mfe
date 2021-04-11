@@ -6,9 +6,32 @@ export default defineConfig({
   },
   title: 'main-umi',
   routes: [
-    { path: '/', component: '@/pages/index' },
-    { path: '/a', component: '@/pages/A' },
-    { path: '/b', component: '@/pages/B' },
+    {
+      path: '/',
+      component: '@/layouts/index',
+      routes: [
+        { path: '/', component: '@/pages/Index' },
+        { path: '/a', component: '@/pages/A' },
+        { path: '/b', component: '@/pages/B' },
+        // 配置子项目
+        {
+          path: '/umi',
+          microApp: 'sub-umi',
+        },
+        {
+          path: '/umi2',
+          microApp: 'sub-umi2',
+        },
+        {
+          path: '/vue',
+          microApp: 'sub-vue',
+        },
+        {
+          path: '/vue2',
+          microApp: 'sub-vue2',
+        },
+      ],
+    },
   ],
   devServer: {
     port: 1500,
