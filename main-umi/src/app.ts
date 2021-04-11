@@ -45,6 +45,20 @@ registerMicroApps(
         console.log('%c[LifeCycle] before mount %s', 'color: green;', app.name)
       },
     ],
+    afterMount: [
+      (app): any => {
+        console.log('%c[LifeCycle] after mount %s', 'color: green;', app.name)
+      },
+    ],
+    beforeUnmount: [
+      (app): any => {
+        console.log(
+          '%c[LifeCycle] before unmount %s',
+          'color: green;',
+          app.name,
+        )
+      },
+    ],
     afterUnmount: [
       (app): any => {
         console.log('%c[LifeCycle] after unmount %s', 'color: green;', app.name)
