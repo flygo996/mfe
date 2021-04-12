@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "main-umi2",
   "scripts": {
     "start": "umi dev",
     "deploy": "sh deploy.sh",
