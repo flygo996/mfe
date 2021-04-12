@@ -38,19 +38,23 @@ export default defineConfig({
       apps: [
         {
           name: 'sub-umi',
-          entry: '//localhost:1510',
+          // entry: '//localhost:1510', // local
+          entry: '//localhost:2510', // 部署地址
         },
         {
           name: 'sub-umi2',
-          entry: '//localhost:1520',
+          // entry: '//localhost:1520',
+          entry: '//localhost:2520',
         },
         {
           name: 'sub-vue',
-          entry: '//localhost:1530',
+          // entry: '//localhost:1530',
+          entry: '//localhost:2530',
         },
         {
           name: 'sub-vue2',
-          entry: '//localhost:1540',
+          // entry: '//localhost:1540',
+          entry: '//localhost:2540',
         },
       ],
     },
