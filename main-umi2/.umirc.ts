@@ -15,14 +15,14 @@ export default defineConfig({
         { path: '/a', component: '@/pages/A' },
         { path: '/b', component: '@/pages/B' },
         // 配置子项目
-        // {
-        //   path: '/umi1',
-        //   microApp: 'sub-umi',
-        // },
-        // {
-        //   path: '/umi2',
-        //   microApp: 'sub-umi2',
-        // },
+        {
+          path: '/umi1',
+          microApp: 'sub-umi',
+        },
+        {
+          path: '/umi2',
+          microApp: 'sub-umi2',
+        },
         {
           path: '/vue1',
           microApp: 'sub-vue',
@@ -40,23 +40,23 @@ export default defineConfig({
         {
           name: 'sub-vue',
           // entry: '//localhost:1530',
-          entry: '//localhost:2531',
+          entry: '//10.8.82.80:8080/vue1/',
         },
         {
           name: 'sub-vue2',
           // entry: '//localhost:1540',
-          entry: '//localhost:2541',
+          entry: '//10.8.82.80:8080/vue2/',
         },
-        // {
-        //   name: 'sub-umi',
-        //   // entry: '//localhost:1510', // local
-        //   entry: '//localhost:2511', // 部署地址
-        // },
-        // {
-        //   name: 'sub-umi2',
-        //   // entry: '//localhost:1520',
-        //   entry: '//localhost:2521',
-        // },
+        {
+          name: 'sub-umi',
+          // entry: '//localhost:1510', // local
+          entry: '//10.8.82.80:8080/umi1/', // 部署地址
+        },
+        {
+          name: 'sub-umi2',
+          // entry: '//localhost:1520',
+          entry: '//10.8.82.80:8080/umi2/',
+        },
       ],
     },
   },

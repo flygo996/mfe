@@ -1,6 +1,6 @@
 module.exports = {
   // publicPath: 'http://localhost:1540/',
-  publicPath: '/vue2', // 本地'/'，qiankun'/vue2'
+  publicPath: '/vue2', // 本地'/'
   configureWebpack: {
     output: {
       library: 'sub-vue2',
