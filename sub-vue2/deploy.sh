@@ -1,5 +1,5 @@
 npm run build
-docker stop mfe-microapp-vue2-hash
-docker rm mfe-microapp-vue2-hash
-docker build -t mfe-microapp-vue2 .
-docker run -p 2540:80 -d  --name mfe-microapp-vue2-hash mfe-microapp-vue2
+docker stop sub-vue2-hash
+docker rm sub-vue2-hash
+docker build -t sub-vue2-hash .
+docker run -p 2541:80 -d  --name sub-vue2-hash sub-vue2-hash

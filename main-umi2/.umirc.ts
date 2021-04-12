@@ -56,7 +56,7 @@ export default defineConfig({
     },
   },
   devServer: {
-    port: 1501,
+    port: 1400,
   },
   proxy: {
     '/api': {
