@@ -193,10 +193,10 @@ export default (props: any) => {
       <div className={styles.content}>{children}</div>
       <br />
       <br />
-      <h3>MicroApp 形式引入(base可以按自己需求任意填写)</h3>
+      {/* <h3>MicroApp 形式引入(base可以按自己需求任意填写)</h3>
       <div className={styles.content}>
         <MicroApp name="sub-umi2" base="/umi2umi2/#/" />
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -5,6 +5,7 @@ export default defineConfig({
     type: 'none',
   },
   title: 'main-umi2',
+  publicPath: '/p2/',
   routes: [
     {
       path: '/',
@@ -14,14 +15,14 @@ export default defineConfig({
         { path: '/a', component: '@/pages/A' },
         { path: '/b', component: '@/pages/B' },
         // 配置子项目
-        {
-          path: '/umi1',
-          microApp: 'sub-umi',
-        },
-        {
-          path: '/umi2',
-          microApp: 'sub-umi2',
-        },
+        // {
+        //   path: '/umi1',
+        //   microApp: 'sub-umi',
+        // },
+        // {
+        //   path: '/umi2',
+        //   microApp: 'sub-umi2',
+        // },
         {
           path: '/vue1',
           microApp: 'sub-vue',
@@ -37,25 +38,25 @@ export default defineConfig({
     master: {
       apps: [
         {
-          name: 'sub-umi',
-          // entry: '//localhost:1510', // local
-          entry: '//localhost:2510', // 部署地址
-        },
-        {
-          name: 'sub-umi2',
-          // entry: '//localhost:1520',
-          entry: '//localhost:2520',
-        },
-        {
           name: 'sub-vue',
           // entry: '//localhost:1530',
-          entry: '//localhost:2530',
+          entry: '//localhost:2531',
         },
         {
           name: 'sub-vue2',
           // entry: '//localhost:1540',
-          entry: '//localhost:2540',
+          entry: '//localhost:2541',
         },
+        // {
+        //   name: 'sub-umi',
+        //   // entry: '//localhost:1510', // local
+        //   entry: '//localhost:2511', // 部署地址
+        // },
+        // {
+        //   name: 'sub-umi2',
+        //   // entry: '//localhost:1520',
+        //   entry: '//localhost:2521',
+        // },
       ],
     },
   },
