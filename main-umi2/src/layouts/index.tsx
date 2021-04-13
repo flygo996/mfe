@@ -56,6 +56,40 @@ export default (props: any) => {
       </p>
       <h3>
         <NavLink
+          to="/vue1/#"
+          exact
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'red',
+          }}
+        >
+          Vue Home
+        </NavLink>
+        {' | '}
+        <NavLink
+          to="/vue1/#/about"
+          exact
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'red',
+          }}
+        >
+          Vue About
+        </NavLink>
+        {' | '}
+        <NavLink
+          to="/vue1/#/login"
+          exact
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'red',
+          }}
+        >
+          Vue Login
+        </NavLink>
+      </h3>
+      <h3>
+        <NavLink
           to="/vue2/#"
           exact
           activeStyle={{
@@ -120,40 +154,6 @@ export default (props: any) => {
           }}
         >
           Umi BBB
-        </NavLink>
-      </h3>
-      <h3>
-        <NavLink
-          to="/vue1/#"
-          exact
-          activeStyle={{
-            fontWeight: 'bold',
-            color: 'red',
-          }}
-        >
-          Vue Home
-        </NavLink>
-        {' | '}
-        <NavLink
-          to="/vue1/#/about"
-          exact
-          activeStyle={{
-            fontWeight: 'bold',
-            color: 'red',
-          }}
-        >
-          Vue About
-        </NavLink>
-        {' | '}
-        <NavLink
-          to="/vue1/#/login"
-          exact
-          activeStyle={{
-            fontWeight: 'bold',
-            color: 'red',
-          }}
-        >
-          Vue Login
         </NavLink>
       </h3>
       <h3>
