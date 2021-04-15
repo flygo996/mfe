@@ -41,22 +41,22 @@ export default defineConfig({
         {
           name: 'sub-vue',
           // entry: '//localhost:1530',
-          entry: '//10.8.82.80:8080/vue1/',
+          entry: '//10.8.82.80:8080/vue1',
         },
         {
           name: 'sub-vue2',
           // entry: '//localhost:1540',
-          entry: '//10.8.82.80:8080/vue2/',
+          entry: '//10.8.82.80:8080/vue2',
         },
         {
           name: 'sub-umi',
           // entry: '//localhost:1510', // local
-          entry: '//10.8.82.80:8080/umi1/', // 部署地址
+          entry: '//10.8.82.80:8080/umi1', // 部署地址
         },
         {
           name: 'sub-umi2',
           // entry: '//localhost:1520',
-          entry: '//10.8.82.80:8080/umi2/',
+          entry: '//10.8.82.80:8080/umi2',
         },
       ],
     },
