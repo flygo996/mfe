@@ -5,6 +5,8 @@ export default defineConfig({
     type: 'none',
   },
   title: 'main-umi',
+  publicPath: '/p1/',
+  base: '/p1',
   routes: [
     {
       path: '/',
