@@ -89,7 +89,7 @@ setGlobalState({
 /**
  * Step3 设置默认进入的子应用
  */
-setDefaultMountApp('/vue2') // 如果不设置，会默认去 '/'，设置了就会去 '/vue2'
+// setDefaultMountApp('/vue2') // 如果不设置，会默认去 '/'，设置了就会去 '/vue2'
 
 /**
  * Step4 启动应用
