@@ -7,6 +7,9 @@ export default defineConfig({
   title: 'main-umi',
   publicPath: '/p1/',
   base: '/p1',
+  history: {
+    type: 'browser',
+  },
   routes: [
     {
       path: '/',
