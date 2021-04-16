@@ -7,6 +7,7 @@ import {
   initGlobalState,
 } from 'qiankun'
 
+console.log(mfeApps) // 为啥打印的不是local的配置？？？
 registerMicroApps(mfeApps, {
   beforeLoad: [
     (app): any => {
