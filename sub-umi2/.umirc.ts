@@ -7,6 +7,7 @@ export default defineConfig({
   title: 'sub-umi2',
   // publicPath: '/umi2/',
   // base: '/umi2/',
+  base: '/', // 因为是hash模式，不管是自己玩还是qiankun子应用，都可以直接设置为'/'(history模式不行，见sub-umi1项目)
   history: {
     type: 'hash',
   },

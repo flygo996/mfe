@@ -158,7 +158,7 @@ export default (props: any) => {
         </NavLink>
         {' | '}
         <NavLink
-          to="/umi2/a"
+          to="/umi2#/a"
           exact
           activeStyle={{
             fontWeight: 'bold',
@@ -169,7 +169,7 @@ export default (props: any) => {
         </NavLink>
         {' | '}
         <NavLink
-          to="/umi2/b"
+          to="/umi2#/b"
           exact
           activeStyle={{
             fontWeight: 'bold',
