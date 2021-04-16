@@ -3,6 +3,7 @@
   "name": "main-umi",
   "scripts": {
     "start": "umi dev",
+    "start:local": "cross-env REACT_APP_ENV=local umi dev",
     "deploy": "sh deploy.sh",
     "build": "umi build",
     "postinstall": "umi generate tmp",

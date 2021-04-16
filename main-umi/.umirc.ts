@@ -5,10 +5,38 @@ export default defineConfig({
     type: 'none',
   },
   title: 'main-umi',
-  publicPath: '/p1/',
-  base: '/p1',
+  base: '/p1/', // Default: '/'
+  publicPath: '/p1/', // Default: '/'
   history: {
     type: 'browser',
+  },
+  define: {
+    mfeApps: [
+      {
+        name: 'sub-umi',
+        entry: '//10.8.82.80:8080/umi1',
+        container: '#mfeContainer',
+        activeRule: '/umi1',
+      },
+      {
+        name: 'sub-umi2',
+        entry: '//10.8.82.80:8080/umi2',
+        container: '#mfeContainer',
+        activeRule: '/umi2',
+      },
+      {
+        name: 'sub-vue',
+        entry: '//10.8.82.80:8080/vue1',
+        container: '#mfeContainer',
+        activeRule: '/vue1',
+      },
+      {
+        name: 'sub-vue2',
+        entry: '//10.8.82.80:8080/vue2',
+        container: '#mfeContainer',
+        activeRule: '/vue2',
+      },
+    ],
   },
   routes: [
     {

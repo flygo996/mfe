@@ -16,7 +16,8 @@ function render (props = {}) {
   console.log(process.env, window.__POWERED_BY_QIANKUN__)
   router = new VueRouter({
     mode: 'history',
-    base: window.__POWERED_BY_QIANKUN__ ? '/vue1' : '/', // '/vue' 与主项目里面的激活路由一致！
+    // base: window.__POWERED_BY_QIANKUN__ ? '/vue1/' : '/', // '/vue' 与主项目里面的激活路由一致！
+    base: '/vue1/',
     routes,
   })
   // console.log('router:', router)
