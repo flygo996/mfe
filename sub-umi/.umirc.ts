@@ -7,7 +7,7 @@ export default defineConfig({
   title: 'sub-umi',
   publicPath: '/umi1/',
   history: {
-    type: 'hash',
+    type: 'browser',
   },
   routes: [
     {
