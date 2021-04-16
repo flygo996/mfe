@@ -2,6 +2,7 @@
   "private": true,
   "name": "main-umi2",
   "scripts": {
+    "start:local": "cross-env IS_LOCAL=1 umi dev",
     "start": "umi dev",
     "deploy": "sh deploy.sh",
     "build": "umi build",
@@ -27,6 +28,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@umijs/test": "^3.4.8",
+    "cross-env": "^7.0.3",
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.0",
     "react": "17.x",

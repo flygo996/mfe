@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "server": "cd server && node index.js",
+    "start:main-umi:local": "cd main-umi && npm run start:local",
+    "start:main-umi2:local": "cd main-umi2 && npm run start:local",
     "start:main-umi": "cd main-umi && npm run start",
     "start:main-umi2": "cd main-umi2 && npm run start",
     "start:sub-umi": "cd sub-umi && npm run start",
@@ -12,6 +14,7 @@
     "start:sub-vue": "cd sub-vue && npm run start",
     "start:sub-vue2": "cd sub-vue2 && npm run start",
     "start": "npm-run-all --parallel start:main-umi start:main-umi2 start:sub-umi start:sub-umi2 start:sub-vue start:sub-vue2",
+    "start:local": "npm-run-all --parallel start:main-umi:local start:main-umi2:local start:sub-umi start:sub-umi2 start:sub-vue start:sub-vue2",
     "deploy:main-umi": "cd main-umi && npm run deploy",
     "deploy:main-umi2": "cd main-umi2 && npm run deploy",
     "deploy:sub-umi": "cd sub-umi && npm run deploy",
