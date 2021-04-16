@@ -17,25 +17,25 @@ export default defineConfig({
     mfeApps: [
       {
         name: 'sub-umi',
-        entry: IS_LOCAL ? '//localhost:1510/umi1' : '//10.8.82.80:8080/umi1',
+        entry: IS_LOCAL ? '//localhost:1510/umi1' : '//10.8.82.80:2500/umi1',
         container: '#mfeContainer',
         activeRule: '/umi1',
       },
       {
         name: 'sub-umi2',
-        entry: IS_LOCAL ? '//localhost:1520/umi2' : '//10.8.82.80:8080/umi2',
+        entry: IS_LOCAL ? '//localhost:1520/umi2' : '//10.8.82.80:2500/umi2',
         container: '#mfeContainer',
         activeRule: '/umi2',
       },
       {
         name: 'sub-vue',
-        entry: IS_LOCAL ? '//localhost:1530/vue1' : '//10.8.82.80:8080/vue1',
+        entry: IS_LOCAL ? '//localhost:1530/vue1' : '//10.8.82.80:2500/vue1',
         container: '#mfeContainer',
         activeRule: '/vue1',
       },
       {
         name: 'sub-vue2',
-        entry: IS_LOCAL ? '//localhost:1540/vue2' : '//10.8.82.80:8080/vue2',
+        entry: IS_LOCAL ? '//localhost:1540/vue2' : '//10.8.82.80:2500/vue2',
         container: '#mfeContainer',
         activeRule: '/vue2',
       },

@@ -6,6 +6,7 @@ export default defineConfig({
   },
   title: 'sub-umi2',
   publicPath: '/umi2/',
+  base: '/umi2/',
   history: {
     type: 'hash',
   },

@@ -6,6 +6,7 @@ export default defineConfig({
   },
   title: 'sub-umi',
   publicPath: '/umi1/',
+  base: '/umi1/',
   history: {
     type: 'browser',
   },
