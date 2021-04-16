@@ -46,12 +46,10 @@ export default defineConfig({
       apps: [
         {
           name: 'sub-umi',
-          entry: '//10.8.82.80:8080/umi1',
           entry: IS_LOCAL ? '//localhost:1510/umi1' : '//10.8.82.80:8080/umi1',
         },
         {
           name: 'sub-umi2',
-          entry: '//10.8.82.80:8080/umi2',
           entry: IS_LOCAL ? '//localhost:1520/umi2' : '//10.8.82.80:8080/umi2',
         },
         {
