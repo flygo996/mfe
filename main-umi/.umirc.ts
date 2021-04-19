@@ -59,7 +59,7 @@ export default defineConfig({
           microApp: 'sub-umi2',
         },
         {
-          path: '/vue',
+          path: '/vue1',
           microApp: 'sub-vue',
         },
         {

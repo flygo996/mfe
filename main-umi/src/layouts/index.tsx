@@ -45,7 +45,7 @@ export default (props: any) => {
       子应用
       <h3>
         <NavLink
-          to="/vue1"
+          to="/vue1/"
           exact
           activeStyle={{
             fontWeight: 'bold',
