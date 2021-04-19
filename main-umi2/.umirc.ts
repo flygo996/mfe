@@ -1,15 +1,15 @@
-import { defineConfig } from 'umi';
+import { defineConfig } from 'umi'
 
-const { IS_LOCAL } = process.env;
-console.log('main-umi2 IS_LOCAL:', IS_LOCAL);
+const { IS_LOCAL } = process.env
+console.log('main-umi2 IS_LOCAL:', IS_LOCAL)
 
 export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
   title: 'main-umi2',
-  base: '/p2/', // Default: '/'
-  publicPath: '/p2/', // Default: '/'
+  base: IS_LOCAL ? '/' : '/p2/', // Default: '/'
+  publicPath: IS_LOCAL ? '/' : '/p2/', // Default: '/'
   history: {
     type: 'browser',
   },
@@ -76,4 +76,4 @@ export default defineConfig({
     },
   },
   fastRefresh: {},
-});
+})
