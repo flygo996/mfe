@@ -1,7 +1,7 @@
-import { defineConfig } from 'umi';
+import { defineConfig } from 'umi'
 
-const { IS_LOCAL } = process.env;
-console.log('main-umi2 IS_LOCAL:', IS_LOCAL);
+const { IS_LOCAL } = process.env
+console.log('main-umi2 IS_LOCAL:', IS_LOCAL)
 
 export default defineConfig({
   nodeModulesTransform: {
@@ -46,19 +46,27 @@ export default defineConfig({
       apps: [
         {
           name: 'sub-umi',
-          entry: IS_LOCAL ? '//localhost:1510/umi1' : '//10.8.82.80:2500/umi1',
+          entry: IS_LOCAL
+            ? '//localhost:1510/umi1/'
+            : '//10.8.82.80:2500/umi1/',
         },
         {
           name: 'sub-umi2',
-          entry: IS_LOCAL ? '//localhost:1520/umi2' : '//10.8.82.80:2500/umi2',
+          entry: IS_LOCAL
+            ? '//localhost:1520/umi2/'
+            : '//10.8.82.80:2500/umi2/',
         },
         {
           name: 'sub-vue',
-          entry: IS_LOCAL ? '//localhost:1530/vue1' : '//10.8.82.80:2500/vue1',
+          entry: IS_LOCAL
+            ? '//localhost:1530/vue1/'
+            : '//10.8.82.80:2500/vue1/',
         },
         {
           name: 'sub-vue2',
-          entry: IS_LOCAL ? '//localhost:1540/vue2' : '//10.8.82.80:2500/vue2',
+          entry: IS_LOCAL
+            ? '//localhost:1540/vue2/'
+            : '//10.8.82.80:2500/vue2/',
         },
       ],
     },
@@ -76,4 +84,4 @@ export default defineConfig({
     },
   },
   fastRefresh: {},
-});
+})
