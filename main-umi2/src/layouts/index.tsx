@@ -1,10 +1,19 @@
-import { NavLink } from 'umi';
+import { NavLink, useModel } from 'umi';
 
 export default (props: any) => {
   const { children } = props;
+  const { globalState, setGlobalState } = useModel('@@qiankunStateForSlave');
 
   return (
     <section style={{ textAlign: 'center' }}>
+      {JSON.stringify(globalState)}
+      <button
+        onClick={() => {
+          setGlobalState({ count: 100 });
+        }}
+      >
+        count add 1
+      </button>
       <h2>main-umi 项目</h2>
       <h2>
         <NavLink
