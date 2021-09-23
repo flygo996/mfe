@@ -5,7 +5,7 @@ export default (props: any) => {
   const { children } = props
   const masterProps = useModel('@@qiankunStateFromMaster')
   console.log(masterProps)
-  const { globalState, setGlobalState } = masterProps
+  const { masterState, setMasterState } = masterProps
   // console.log(typeof setGlobalState)
   // setGlobalState({
   //   name: 'lalalal',
@@ -13,17 +13,17 @@ export default (props: any) => {
   // })
 
   useEffect(() => {
-    console.log('子应用-useEffect 的 globalState-->', globalState)
-  }, [globalState])
+    console.log('子应用-useEffect 的 globalState-->', masterState)
+  }, [masterState])
 
   return (
     <section style={{ textAlign: 'center' }}>
       <h2>sub-umi2 项目</h2>
       <button
         onClick={() => {
-          setGlobalState({
-            ...globalState,
-            count: globalState.count + 1,
+          setMasterState({
+            ...masterState,
+            count: masterState.count + 1,
           })
         }}
       >

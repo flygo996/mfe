@@ -3,21 +3,21 @@ import { NavLink, useModel } from 'umi';
 
 export default (props: any) => {
   const { children } = props;
-  const { globalState, setGlobalState } = useModel('@@qiankunStateForSlave');
+  const { masterState, setMasterState } = useModel('@@qiankunStateForSlave');
+  // useEffect(() => {
+  //   setMasterState({ name: 'lili2', count: -1 });
+  // }, []);
   useEffect(() => {
-    setGlobalState({ name: 'lili2', count: -1 });
-  }, []);
-  useEffect(() => {
-    console.log('父应用-useEffect 的 globalState：', globalState);
-  }, [globalState]);
+    console.log('父应用-useEffect 的 globalState：', masterState);
+  }, [masterState]);
   return (
     <section style={{ textAlign: 'center' }}>
-      {JSON.stringify(globalState)}
+      {JSON.stringify(masterState)}
       <button
         onClick={() => {
-          setGlobalState({
-            ...globalState,
-            count: globalState.count + 1,
+          setMasterState({
+            ...masterState,
+            count: masterState.count + 1,
           });
         }}
       >
