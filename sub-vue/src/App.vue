@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
+      <button @click="add">count add 1</button>
+      <div>{{ globalState }}</div>
       <h2>sub-vue 项目</h2>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
@@ -9,6 +11,28 @@
     <router-view />
   </div>
 </template>
+
+<script>
+import actions from './actions'
+console.log(actions)
+export default {
+  data () {
+    return {
+      globalState: {},
+    }
+  },
+  mount () {
+    this.globalState = actions.globalState
+  },
+  methods: {
+    add () {
+      actions.setGlobalState({
+        count: 100,
+      })
+    },
+  },
+}
+</script>
 
 <style>
 #app {

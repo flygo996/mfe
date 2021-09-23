@@ -1,15 +1,24 @@
+import { useEffect } from 'react';
 import { NavLink, useModel } from 'umi';
 
 export default (props: any) => {
   const { children } = props;
   const { globalState, setGlobalState } = useModel('@@qiankunStateForSlave');
-
+  useEffect(() => {
+    setGlobalState({ name: 'lili2', count: -1 });
+  }, []);
+  useEffect(() => {
+    console.log('父应用-useEffect 的 globalState：', globalState);
+  }, [globalState]);
   return (
     <section style={{ textAlign: 'center' }}>
       {JSON.stringify(globalState)}
       <button
         onClick={() => {
-          setGlobalState({ count: 100 });
+          setGlobalState({
+            ...globalState,
+            count: globalState.count + 1,
+          });
         }}
       >
         count add 1
