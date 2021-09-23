@@ -13,13 +13,6 @@ export function useQiankunStateForSlave() {
     actions.setGlobalState(masterState);
   }, [masterState]);
 
-  useEffect(() => {
-    actions.onGlobalStateChange((state: any, prev: any) => {
-      console.log('父应用里面的onGlobalStateChange-222：', state, prev);
-      setMasterState(state);
-    });
-  }, []);
-
   return {
     masterState,
     setMasterState,
