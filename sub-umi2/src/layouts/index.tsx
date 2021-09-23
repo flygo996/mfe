@@ -6,12 +6,6 @@ export default (props: any) => {
   const masterProps = useModel('@@qiankunStateFromMaster')
   console.log(masterProps)
   const { masterState, setMasterState } = masterProps
-  // console.log(typeof setGlobalState)
-  // setGlobalState({
-  //   name: 'lalalal',
-  //   count: -1,
-  // })
-
   useEffect(() => {
     console.log('子应用-useEffect 的 globalState-->', masterState)
   }, [masterState])

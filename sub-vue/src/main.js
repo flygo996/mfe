@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import routes from './router'
+import store from './store'
 import actions from './actions'
 import './public-path'
 
@@ -11,7 +12,7 @@ Vue.config.productionTip = false
 let router = null
 let instance = null
 
-function render (props = {}) {
+function render(props = {}) {
   const { container } = props
   console.log(process.env, window.__POWERED_BY_QIANKUN__)
   router = new VueRouter({
@@ -23,6 +24,7 @@ function render (props = {}) {
   // console.log('router.options:', JSON.stringify(router.options, null, 2))
   instance = new Vue({
     router,
+    store,
     render: h => h(App),
   }).$mount(container ? container.querySelector('#app') : '#app')
 }
@@ -33,17 +35,21 @@ if (!window.__POWERED_BY_QIANKUN__) {
 // eslint-disable-next-line no-undef
 console.log('__webpack_public_path__:', __webpack_public_path__) // '/'
 
-export async function bootstrap (props) {
+export async function bootstrap(props) {
   console.log('bootstrap 函数: ', props)
 }
 // props默认会有 onGlobalStateChange 和 setGlobalState 两个api
-// 我们自己封装增加了一个api: getGlobalState
-export async function mount (props) {
+export async function mount(props) {
   console.log('mount 函数: ', props)
   actions.setActions(props)
+  props.onGlobalStateChange((state, prev) => {
+    // 存到store，全局可用
+    store.dispatch('setGlobalState', state)
+    console.log('onGlobalStateChange', state, prev)
+  }, true)
   render(props)
 }
-export async function unmount (props) {
+export async function unmount(props) {
   console.log('unmount函数:', props)
   instance.$destroy()
   instance = null

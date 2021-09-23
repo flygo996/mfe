@@ -14,20 +14,24 @@
 
 <script>
 import actions from './actions'
-console.log(actions)
+import { mapGetters } from 'vuex'
+
 export default {
   data () {
-    return {
-      globalState: {},
-    }
+    return {}
   },
-  mount () {
-    this.globalState = actions.globalState
+  computed: {
+    ...mapGetters(['globalState']),
+  },
+  mounted () {
+    console.log(actions)
+    console.log(actions.initialState)
+    console.log(actions.masterState)
   },
   methods: {
     add () {
       actions.setGlobalState({
-        count: 100,
+        count: this.globalState.count + 1,
       })
     },
   },

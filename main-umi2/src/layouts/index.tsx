@@ -1,18 +1,30 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink, useModel } from 'umi';
+import actions, { initialState, InitialStateType } from '@/actions';
+console.log(actions);
 
 export default (props: any) => {
   const { children } = props;
   const { masterState, setMasterState } = useModel('@@qiankunStateForSlave');
-  // useEffect(() => {
-  //   setMasterState({ name: 'lili2', count: -1 });
-  // }, []);
+  const [globalState, setGlobalState] = useState<InitialStateType>(
+    initialState,
+  );
   useEffect(() => {
-    console.log('父应用-useEffect 的 globalState：', masterState);
+    actions.onGlobalStateChange((state: any, prev: any) => {
+      // state: 变更后的状态; prev 变更前的状态
+      console.log('父应用里面的onGlobalStateChange：', state, prev);
+      setGlobalState(state);
+    });
+  }, []);
+
+  useEffect(() => {
+    console.log('父应用-useEffect 的 masterState', masterState);
   }, [masterState]);
+
   return (
     <section style={{ textAlign: 'center' }}>
-      {JSON.stringify(masterState)}
+      <p>{JSON.stringify(masterState)}</p>
+      <p>{JSON.stringify(globalState)}</p>
       <button
         onClick={() => {
           setMasterState({
