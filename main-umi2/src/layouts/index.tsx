@@ -20,7 +20,7 @@ export default (props: any) => {
       <button
         onClick={() => {
           setMasterState({
-            ...masterState,
+            ...masterState, // 不能去掉，否则就没有了
             count: masterState.count + 1,
           });
         }}

@@ -31,7 +31,7 @@ export default {
   methods: {
     add () {
       actions.setGlobalState({
-        count: this.globalState.count + 1,
+        count: this.globalState.count + 1, // 只用写这个属性就行，其他属性会保留
       })
     },
   },

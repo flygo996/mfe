@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useModel } from 'umi';
 import actions, { initialState, InitialStateType } from '@/actions';
 
 const useGlobal = () => {
