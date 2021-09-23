@@ -6,16 +6,8 @@ console.log(actions);
 export default (props: any) => {
   const { children } = props;
   const { masterState, setMasterState } = useModel('@@qiankunStateForSlave');
-  const [globalState, setGlobalState] = useState<InitialStateType>(
-    initialState,
-  );
-  useEffect(() => {
-    actions.onGlobalStateChange((state: any, prev: any) => {
-      // state: 变更后的状态; prev 变更前的状态
-      console.log('父应用里面的onGlobalStateChange：', state, prev);
-      setGlobalState(state);
-    });
-  }, []);
+  const { globalState, setGlobalState } = useModel('global');
+  console.log({ globalState, setGlobalState });
 
   useEffect(() => {
     console.log('父应用-useEffect 的 masterState', masterState);

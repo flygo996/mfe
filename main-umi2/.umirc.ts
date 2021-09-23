@@ -33,6 +33,7 @@ export default defineConfig({
       ],
     },
   ],
+  dva: { hmr: true },
   qiankun: {
     master: {
       apps: [
