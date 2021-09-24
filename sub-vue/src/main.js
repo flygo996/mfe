@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import routes from './router'
 import store from './store'
 import actions from './actions'
+import qiankun from './qiankun'
 import './public-path'
 
 Vue.use(VueRouter)
@@ -41,8 +42,11 @@ export async function bootstrap(props) {
 // props默认会有 onGlobalStateChange 和 setGlobalState 两个api
 export async function mount(props) {
   console.log('mount 函数: ', props)
+  const { setMasterState } = props
+  qiankun.setMasterState = setMasterState
   actions.setActions(props)
   props.onGlobalStateChange((state, prev) => {
+    qiankun.masterState = state
     // 存到store，全局可用
     store.dispatch('setGlobalState', state)
     console.log('onGlobalStateChange', state, prev)

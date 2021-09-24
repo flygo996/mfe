@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <button @click="add">count add 1</button>
+      <button @click="add">count add 1</button> |
+      <button @click="add2">count add 1</button>
       <div>{{ globalState }}</div>
       <h2>sub-vue 项目</h2>
       <router-link to="/">Home</router-link> |
@@ -14,6 +15,7 @@
 
 <script>
 import actions from './actions'
+import qiankun from './qiankun'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -27,11 +29,20 @@ export default {
     console.log(actions)
     console.log(actions.initialState)
     console.log(actions.masterState)
+    //
+    console.log(qiankun)
+    console.log(qiankun.masterState)
   },
   methods: {
     add () {
       actions.setGlobalState({
         count: this.globalState.count + 1, // 只用写这个属性就行，其他属性会保留
+      })
+    },
+    add2 () {
+      qiankun.setMasterState({
+        ...qiankun.masterState,
+        count: qiankun.masterState.count + 1,
       })
     },
   },
