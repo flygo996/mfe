@@ -11,7 +11,7 @@ Vue.config.productionTip = false
 let router = null
 let instance = null
 
-function render(props = {}) {
+function render (props = {}) {
   const { container } = props
   console.log(process.env, window.__POWERED_BY_QIANKUN__)
   router = new VueRouter({
@@ -33,16 +33,16 @@ if (!window.__POWERED_BY_QIANKUN__) {
 // eslint-disable-next-line no-undef
 console.log('__webpack_public_path__:', __webpack_public_path__) // '/'
 
-export async function bootstrap(props) {
+export async function bootstrap (props) {
   console.log('bootstrap 函数: ', props)
 }
 // props默认会有 onGlobalStateChange 和 setGlobalState 两个api
-export async function mount(props) {
+export async function mount (props) {
   console.log('mount 函数: ', props)
   actions.setActions(props)
   render(props)
 }
-export async function unmount(props) {
+export async function unmount (props) {
   console.log('unmount函数:', props)
   instance.$destroy()
   instance = null

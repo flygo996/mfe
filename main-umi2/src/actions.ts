@@ -16,6 +16,7 @@ export type InitialStateType = {
   name: string;
   count: number;
   project: Project | null;
+  testFn: (str: string) => void;
 };
 
 export const initialState: InitialStateType = {
@@ -23,6 +24,9 @@ export const initialState: InitialStateType = {
   name: 'bzl',
   count: 0,
   project: null,
+  testFn(str: string) {
+    console.log('父应用打印的str:', str);
+  },
 };
 // type MicroAppStateActions = {
 //   onGlobalStateChange: (callback: OnGlobalStateChangeCallback, fireImmediately?: boolean) => void;

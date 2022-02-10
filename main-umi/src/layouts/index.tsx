@@ -1,4 +1,4 @@
-import { NavLink } from 'umi'
+import { NavLink, history } from 'umi'
 
 export default (props: any) => {
   const { children } = props
@@ -6,6 +6,20 @@ export default (props: any) => {
   return (
     <section style={{ textAlign: 'center' }}>
       <h2>main-umi 项目</h2>
+      <button
+        onClick={() => {
+          history.push('/')
+        }}
+      >
+        history.push('/')
+      </button>
+      <button
+        onClick={() => {
+          history.replace('/')
+        }}
+      >
+        history.replace('/')
+      </button>
       <h2>
         <NavLink
           to="/"

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { NavLink, useModel } from 'umi';
+import { NavLink, useModel, history } from 'umi';
 import actions, { initialState, InitialStateType } from '@/actions';
 console.log(actions);
 
@@ -17,6 +17,20 @@ export default (props: any) => {
     <section style={{ textAlign: 'center' }}>
       <p>{JSON.stringify(masterState)}</p>
       <p>{JSON.stringify(globalState)}</p>
+      <button
+        onClick={() => {
+          history.push('/');
+        }}
+      >
+        history.push('/')
+      </button>
+      <button
+        onClick={() => {
+          history.replace('/');
+        }}
+      >
+        history.replace('/')
+      </button>
       <button
         onClick={() => {
           setMasterState({

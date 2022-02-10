@@ -4,6 +4,7 @@
       <button @click="add">count add 1</button> |
       <button @click="add2">count add 1</button>
       <div>{{ globalState }}</div>
+      <button @click="send">发送打印信息</button> |
       <h2>sub-vue 项目</h2>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
